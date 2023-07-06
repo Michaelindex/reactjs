@@ -33,10 +33,10 @@ class App extends Component{
     return (
     <div className="App">
       {posts.map(post => (
-        <>
-        <h1 key={post.id}>{post.title}</h1>
-        <p>{post.body}</p>
-        </>
+        <div  key={post.id} >
+          <h1>{post.title}</h1>
+          <p>{post.body}</p>
+        </div>
       ))}
     </div>
     );
