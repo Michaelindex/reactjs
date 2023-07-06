@@ -3,8 +3,12 @@ import { Component } from 'react';
 
 class App extends Component{
   state = {
-      posts: [
-        {
+      posts: []
+    };
+
+    componentDidMount() {
+      this.setState({
+        posts: [{
           id: 1,
           title: "O titulo 1",
           body: "O corpo 1"
@@ -21,9 +25,10 @@ class App extends Component{
           title: "O titulo 3",
           body: "O corpo 3"
 
-        }
-      ]
-    };
+        }]
+    
+      })
+    }
 
   render() {
     //const name = this.state.name
