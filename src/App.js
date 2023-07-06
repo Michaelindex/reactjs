@@ -7,16 +7,6 @@ class App extends Component{
       counter : 0
     };
 
-  handlePClick = () => {
-    this.setState({ name: 'Junior'});
-  }
-
-  handleAClick = (event) => {
-    event.preventDefault();
-    const {counter} = this.state;
-    this.setState({ counter: counter + 1});
-  }
-
   render() {
     //const name = this.state.name
     const { name, counter } = this.state;
