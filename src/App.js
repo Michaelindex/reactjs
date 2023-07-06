@@ -13,14 +13,14 @@ class App extends Component{
   }
 
   handlePClick() {
-    console.log(`<p> click a`)
+    console.log("aaaa")
   }
 
   render() {
     //const name = this.state.name
     const { name } = this.state;
 
-
+    
     return (
       <div className="App">
       <header className="App-header">
