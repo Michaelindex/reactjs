@@ -5,6 +5,7 @@ import { Component } from 'react';
 class App extends Component{
   constructor(props) {
     super();
+    this.handlePClick = this.handlePClick.bind(this);
 
     this.state = {
       name : 'Michael Dos Santos'
@@ -12,8 +13,7 @@ class App extends Component{
   }
 
   handlePClick() {
-    const { name } = this.state;
-    console.log(`<p> click ${name}`)
+    console.log(`<p> click a`)
   }
 
   render() {
