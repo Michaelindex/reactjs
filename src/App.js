@@ -3,17 +3,12 @@ import './App.css';
 import { Component } from 'react';
 
 class App extends Component{
-  constructor(props) {
-    super();
-    this.handlePClick = this.handlePClick.bind(this);
-
-    this.state = {
+  state = {
       name : 'Michael Dos Santos',
       counter : 0
     };
-  }
 
-  handlePClick() {
+  handlePClick = () => {
     this.setState({ name: 'Junior'});
   }
 
