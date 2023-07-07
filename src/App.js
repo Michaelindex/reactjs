@@ -24,16 +24,24 @@ class App extends Component{
 
       }
     ]
-    };
+  };
 
-    componentDidMount() {
-      const { posts, counter } = this.state;
-      posts[0].title = "O Titulo Mudou";
+  componentDidMount() {
+    this.handleTimeout();
+  }
 
-      setTimeout(() => {
-        this.setState({ posts });
-      }, 5000);
-    }
+  componentDidUpdate() {
+    this.handleTimeout();
+  }
+
+  handleTimeout = () => {
+    const { posts, counter } = this.state;
+    posts[0].title = "O Titulo Mudou";
+
+    setTimeout(() => {
+      this.setState({ posts, counter: counter + 1 });
+    }, 1000);
+  }
 
   render() {
     //const name = this.state.name
