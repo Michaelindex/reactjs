@@ -26,14 +26,18 @@ class App extends Component{
 
     
     return (
-    <div className="posts">
-      {posts.map(post => (
-        <div  key={post.id} className='post-content'>
-          <h1>{post.title}</h1>
-          <p>{post.body}</p>
+      <section className='container'>
+        <div className="posts">
+          {posts.map(post => (
+            <div className='post'>
+              <div  key={post.id} className='post-content'>
+                <h1>{post.title}</h1>
+                <p>{post.body}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </section>
     );
   }
 }
